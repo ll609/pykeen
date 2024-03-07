@@ -941,7 +941,8 @@ def suggest_kwargs(
         # if isinstance(info, (tuple, list, set)):
         #     info = dict(type='categorical', choices=list(info))
 
-        dtype, low, high = info.get("type"), info.get("low"), info.get("high")
+        print(info)
+        dtype, low, high = info["type"], info.get("low"), info.get("high")
         log = info.get("log") in {True, "TRUE", "True", "true", "t", "YES", "Yes", "yes", "y"}
         if dtype in {int, "int"}:
             scale = info.get("scale")
