@@ -942,6 +942,9 @@ def suggest_kwargs(
         #     info = dict(type='categorical', choices=list(info))
 
         print(info)
+        if info == 'distmult':
+            continue
+            
         dtype, low, high = info["type"], info.get("low"), info.get("high")
         log = info.get("log") in {True, "TRUE", "True", "true", "t", "YES", "Yes", "yes", "y"}
         if dtype in {int, "int"}:
